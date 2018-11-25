@@ -1,0 +1,34 @@
+<ion-header>
+
+    <ion-navbar color="secondary" text-center>
+      <ion-title text-left>
+          <ion-icon name="bicycle"></ion-icon>
+        GreenBike IPB
+      </ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+    <ion-list>
+  
+      <ion-item>
+        <ion-label floating>NIM</ion-label>
+        <ion-input type="text" [(ngModel)]="email"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label floating>Kata Sandi</ion-label>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+  
+    </ion-list>
+  
+    <button ion-button block color='secondary' (click)="signIn()">Masuk</button>
+    <br/>
+    <hr>
+    <p align="center">Belum Punya Akun?</p>
+    <button ion-button block outline  color='secondary' (click)="signUp()">Daftar</button>
+    
+  </ion-content>
