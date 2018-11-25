@@ -33,8 +33,9 @@ export class MyApp {
 
     // set our app's pages
     this.pages = [
-      { title: 'To Do List', component: HelloIonicPage },
+      { title: 'Beranda', component: HelloIonicPage },
       { title: 'Profil', component: ProfilePage },
+      
       // { title: 'List Item', component: ListPage },
       // { title: 'Sign In', component: SignInPage },
     ];

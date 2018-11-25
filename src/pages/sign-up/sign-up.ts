@@ -10,6 +10,10 @@ export class SignUpPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  name : string;
+  nim : string;
+
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad SignUpPage');
   }
