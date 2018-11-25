@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { SignInPage } from '../sign-in/sign-in';
 
 @Component({
   selector: 'page-profile',
@@ -13,5 +14,11 @@ export class ProfilePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProfilePage');
   }
+
+  signOut(){
+    this.navCtrl.setRoot(SignInPage);
+  }
+
+  
 
 }

@@ -10,6 +10,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { SignInPage } from '../pages/sign-in/sign-in';
 import { SignUpPage } from '../pages/sign-up/sign-up';
+import { SignUp2Page } from '../pages/sign-up2/sign-up2';
 
 
 @Component({
@@ -35,7 +36,7 @@ export class MyApp {
       { title: 'To Do List', component: HelloIonicPage },
       { title: 'Profil', component: ProfilePage },
       // { title: 'List Item', component: ListPage },
-      { title: 'Sign In', component: SignInPage },
+      // { title: 'Sign In', component: SignInPage },
     ];
   }
 
