@@ -42,9 +42,24 @@
           <ion-label floating>Konfirmasi Kata Sandi</ion-label>
           <ion-input type="password" [(ngModel)]="passwordTest"></ion-input>
         </ion-item>
+
+        <ion-item>
+            <ion-label floating>Alamat</ion-label>
+            <ion-input type="text" [(ngModel)]="address"></ion-input>
+          </ion-item>
+  
+          <ion-item>
+              <ion-label floating>Departemen</ion-label>
+              <ion-input type="text" [(ngModel)]="departemen"></ion-input>
+            </ion-item>
+  
+          <ion-item>
+              <ion-label floating>Fakultas</ion-label>
+              <ion-input type="text" [(ngModel)]="fakultas"></ion-input>
+          </ion-item>
     
       </ion-list>
     
-      <button ion-button block  color="secondary" (click)="signUp2()">Daftar</button>
+      <button ion-button block  color="secondary" (click)="done()">Daftar</button>
       
     </ion-content>

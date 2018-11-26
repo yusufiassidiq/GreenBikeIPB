@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, App } from 'ionic-angular';
 import { SignInPage } from '../sign-in/sign-in';
 
 @Component({
@@ -8,7 +8,7 @@ import { SignInPage } from '../sign-in/sign-in';
 })
 export class ProfilePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public app: App) {
   }
 
   ionViewDidLoad() {
@@ -16,7 +16,9 @@ export class ProfilePage {
   }
 
   signOut(){
-    this.navCtrl.setRoot(SignInPage);
+    const root = this.app.getRootNav();
+    root.setRoot(SignInPage);
+    // this.navCtrl.setRoot(SignInPage);
   }
 
   
