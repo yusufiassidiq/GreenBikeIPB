@@ -1,14 +1,24 @@
 <ion-header>
-    <ion-navbar color="secondary" text-center>
-      <ion-title text-centre>
-        <ion-icon name="bicycle"></ion-icon>
-        Detail Sepeda
-        <button ion-button clear class="invisibleButton"></button>
-      </ion-title>
-    </ion-navbar>  
-  </ion-header>
+  <ion-navbar color="secondary" text-center>
+    <ion-title text-centre>
+      <ion-icon name="bicycle"></ion-icon>
+      Detail Sepeda
+      <button ion-button clear class="invisibleButton"></button>
+    </ion-title>
+  </ion-navbar>  
+</ion-header>
 
 
 <ion-content padding>
+  <img src="../../assets/pict/bike.jpg">
+  <ion-card-title>Sepeda Pria Warna Hijau</ion-card-title>
+  <h4>Stok tersedia: <b>200</b></h4>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias soluta doloribus in. Unde quisquam quaerat perferendis ad quae, doloribus ipsum nisi debitis esse fuga incidunt. Alias porro magnam quos eaque?
+  </p>
 
 </ion-content>
+
+<ion-footer text-center class="footer">
+    <button outline ion-button block color='secondary' (click)='pinjam()'>Pinjam Sepeda</button>
+</ion-footer>

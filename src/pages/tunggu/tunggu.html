@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar color="secondary" text-center>
+    <ion-title text-centre>
+      <ion-icon name="bicycle"></ion-icon>
+      Proses Peminjaman
+      <button ion-button clear class="invisibleButton"></button>
+    </ion-title>
+  </ion-navbar>  
+</ion-header>
+
+
+<ion-content padding>
+    <img src="../../assets/pict/bike.jpg">
+    <ion-card-title>Sepeda Pria Warna Hijau</ion-card-title>
+    <h4>Stok tersedia: <b>200</b></h4>
+    <p>
+      Silakan datang ke <b>Shelter Sepeda</b> yang bertempat di depan gedung <b>FMIPA IPB</b>. Klik Cancel jika ingin membatalkan
+    </p>
+
+</ion-content>
+
+<ion-footer text-center class="footer">
+    <button ion-button block color='danger' (click)='cancel()'>Batal</button>
+</ion-footer>

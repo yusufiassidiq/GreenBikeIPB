@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, App } from 'ionic-angular';
-import { DetailSepedaPage } from '../detail-sepeda/detail-sepeda';
+import { TungguPage } from '../tunggu/tunggu';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html',
+  selector: 'page-peraturan',
+  templateUrl: 'peraturan.html',
 })
-export class HomePage {
+export class PeraturanPage {
 
   constructor(
     public navCtrl: NavController, 
@@ -16,10 +16,11 @@ export class HomePage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad HomePage');
+    console.log('ionViewDidLoad PeraturanPage');
   }
-  
-  detailSepeda() {
-    this.app.getRootNav().push(DetailSepedaPage);
+
+  pinjam(){
+    this.app.getRootNav().push(TungguPage);
   }
+
 }

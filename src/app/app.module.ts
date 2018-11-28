@@ -16,6 +16,8 @@ import { SignUpPage } from '../pages/sign-up/sign-up';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { HomePage } from '../pages/home/home';
 import { DetailSepedaPage } from '../pages/detail-sepeda/detail-sepeda';
+import { PeraturanPage } from '../pages/peraturan/peraturan';
+import { TungguPage } from '../pages/tunggu/tunggu';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { DetailSepedaPage } from '../pages/detail-sepeda/detail-sepeda';
     ListPage,
     WelcomePage,
     HomePage,
-    DetailSepedaPage
+    DetailSepedaPage,
+    PeraturanPage,
+    TungguPage
   ],
   imports: [
     BrowserModule,
@@ -47,7 +51,9 @@ import { DetailSepedaPage } from '../pages/detail-sepeda/detail-sepeda';
     ListPage,
     WelcomePage,
     HomePage,
-    DetailSepedaPage
+    DetailSepedaPage,
+    PeraturanPage,
+    TungguPage
   ],
   providers: [
     StatusBar,

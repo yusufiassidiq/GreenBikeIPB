@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, App } from 'ionic-angular';
+import { PeraturanPage } from '../peraturan/peraturan';
 
 /**
  * Generated class for the DetailSepedaPage page.
@@ -14,11 +15,19 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class DetailSepedaPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    public app: App
+    ) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetailSepedaPage');
+  }
+
+  pinjam() {
+    this.app.getRootNav().push(PeraturanPage);
   }
 
 }
