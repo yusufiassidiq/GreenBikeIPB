@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, App } from 'ionic-angular';
+import { DetailSepedaPage } from '../detail-sepeda/detail-sepeda';
 
 /**
  * Generated class for the HomePage page.
@@ -14,11 +15,18 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    public app: App) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
+  }
+  
+  detailSepeda() {
+    this.app.getRootNav().push(DetailSepedaPage);
   }
 
 }
