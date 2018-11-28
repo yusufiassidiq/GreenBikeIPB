@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { HelloIonicPage } from '../hello-ionic/hello-ionic';
+import { HomePage } from '../home/home'
 @Component({
   selector: 'page-sign-up',
   templateUrl: 'sign-up.html',
@@ -19,7 +20,7 @@ export class SignUpPage {
   }
 
   done(){
-    this.navCtrl.setRoot(HelloIonicPage);
+    this.navCtrl.setRoot(HomePage);
   }
 
 

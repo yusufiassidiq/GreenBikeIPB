@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { HelloIonicPage } from '../hello-ionic/hello-ionic';
 import { SignUpPage } from '../sign-up/sign-up';
+import { HomePage } from '../home/home'
 
 @Component({
   selector: 'page-sign-in',
@@ -13,7 +14,7 @@ export class SignInPage {
   }
 
   signIn(){
-    this.navCtrl.setRoot(HelloIonicPage);
+    this.navCtrl.setRoot(HomePage);
   }
 
   signUp(){
