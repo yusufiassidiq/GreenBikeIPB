@@ -15,6 +15,7 @@ import { SignInPage } from '../pages/sign-in/sign-in';
 import { SignUpPage } from '../pages/sign-up/sign-up';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { HomePage } from '../pages/home/home';
+import { DetailSepedaPage } from '../pages/detail-sepeda/detail-sepeda';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { HomePage } from '../pages/home/home';
     SignUpPage,
     ListPage,
     WelcomePage,
-    HomePage
+    HomePage,
+    DetailSepedaPage
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,8 @@ import { HomePage } from '../pages/home/home';
     SignUpPage,
     ListPage,
     WelcomePage,
-    HomePage
+    HomePage,
+    DetailSepedaPage
   ],
   providers: [
     StatusBar,

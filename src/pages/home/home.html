@@ -5,18 +5,44 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-    <ion-navbar color="secondary" text-center>
-      <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-      <ion-title text-centre>
-        <ion-icon name="bicycle"></ion-icon>
-        GreenBike IPB
-      </ion-title>
-    </ion-navbar>  
-  </ion-header>
+  <ion-navbar color="secondary" text-center>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-centre>
+      <ion-icon name="bicycle"></ion-icon>
+      GreenBike IPB
+    </ion-title>
+  </ion-navbar>  
+</ion-header>
 
 
 <ion-content padding>
+  <br>
+  <br>
+  <div text-center><b>Silakan Pilih Sepeda</b></div>
+  <br>
+  <ion-card (click)='detailSepeda()'>
+    <img src="../../assets/pict/bike.jpg">
+    <ion-card-content>
+      <ion-card-title>
+        Sepeda Pria warna Hijau
+      </ion-card-title>
+      <p>
+        Stock tersedia: <b>100</b>
+      </p>
+    </ion-card-content>
+  </ion-card>
+  <ion-card (click)='detailSepeda()'>
+      <img src="../../assets/pict/bike.jpg">
+      <ion-card-content>
+        <ion-card-title>
+          Sepeda Pria warna Hijau
+        </ion-card-title>
+        <p>
+          Stock tersedia: <b>20</b>
+        </p>
+      </ion-card-content>
+    </ion-card>
 
 </ion-content>
