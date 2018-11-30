@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, App } from 'ionic-angular';
+import { NavController, NavParams, App, AlertController } from 'ionic-angular';
 import { SignInPage } from '../sign-in/sign-in';
 
 @Component({
@@ -8,17 +8,41 @@ import { SignInPage } from '../sign-in/sign-in';
 })
 export class ProfilePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public app: App) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public app: App, public alertCtrl: AlertController,) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProfilePage');
   }
 
+  // signOut(){
+  //   const root = this.app.getRootNav();
+  //   root.setRoot(SignInPage);
+  //   // this.navCtrl.setRoot(SignInPage);
+  // }
+
   signOut(){
-    const root = this.app.getRootNav();
-    root.setRoot(SignInPage);
-    // this.navCtrl.setRoot(SignInPage);
+    let confirm = this.alertCtrl.create({
+      title: 'Keluar ?',
+      message: 'Kamu yakin?',
+      buttons: [
+        {
+          text: 'Tidak',
+          handler: () => {
+            console.log('Disagree clicked');
+          }
+        },
+        {
+          text: 'Ya',
+          handler: () => {
+            console.log('Agree clicked');
+            // this.data.logout();  //hapus storage cache local  
+            this.navCtrl.setRoot(SignInPage);
+          }
+        }
+      ]
+    });
+    confirm.present();
   }
 
   
