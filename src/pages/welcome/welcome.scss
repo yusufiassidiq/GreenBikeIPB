@@ -6,12 +6,10 @@ page-welcome {
         background-size: cover;
     }
 
-    .logo {
-        max-height: 20vh;
-        margin-top: 20vh;
-        margin-left: 5vh;
-        margin-bottom: 20vh;
-        border-top-left-radius: 2%; 
-        border-top-right-radius: 2%;
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 82%;
     }
 }
