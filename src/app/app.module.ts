@@ -18,6 +18,9 @@ import { HomePage } from '../pages/home/home';
 import { DetailSepedaPage } from '../pages/detail-sepeda/detail-sepeda';
 import { PeraturanPage } from '../pages/peraturan/peraturan';
 import { TungguPage } from '../pages/tunggu/tunggu';
+import { Data } from '../provider/data';
+import { HttpModule } from '@angular/http';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
@@ -38,6 +41,8 @@ import { TungguPage } from '../pages/tunggu/tunggu';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpModule,
+    IonicStorageModule.forRoot(),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -58,7 +63,8 @@ import { TungguPage } from '../pages/tunggu/tunggu';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Data
   ]
 })
 export class AppModule {}
