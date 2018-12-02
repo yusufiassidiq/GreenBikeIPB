@@ -27,17 +27,17 @@ export class ProfilePage {
       message: 'Kamu yakin?',
       buttons: [
         {
-          text: 'Tidak',
-          handler: () => {
-            console.log('Disagree clicked');
-          }
-        },
-        {
           text: 'Ya',
           handler: () => {
             console.log('Agree clicked');
             // this.data.logout();  //hapus storage cache local  
             this.navCtrl.setRoot(SignInPage);
+          }
+        },
+        {
+          text: 'Tidak',
+          handler: () => {
+            console.log('Disagree clicked');
           }
         }
       ]
