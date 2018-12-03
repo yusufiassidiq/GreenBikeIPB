@@ -1,10 +1,13 @@
 import { Component, ViewChild } from '@angular/core';
 
 import { Platform, MenuController, Nav } from 'ionic-angular';
+import { Data } from '../provider/data';
 
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { ListPage } from '../pages/list/list';
 import { ProfilePage } from '../pages/profile/profile';
+import { HomePage } from '../pages/home/home';
+import { SignInPage } from '../pages/sign-in/sign-in';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -31,7 +34,7 @@ export class MyApp {
 
     // set our app's pages
     this.pages = [
-      { title: 'Beranda', component: HelloIonicPage },
+      { title: 'Beranda', component: HomePage },
       { title: 'Profil', component: ProfilePage },
       
       // { title: 'List Item', component: ListPage },
@@ -46,6 +49,15 @@ export class MyApp {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+    //Session
+    // this.data.isLogin().then((value)=>{
+    //   if(value){
+    //     this.rootPage = HomePage;
+    //   } else {
+    //      this.rootPage = SignInPage;
+    //   }    
+    // });
+    //Session
   }
 
   openPage(page) {

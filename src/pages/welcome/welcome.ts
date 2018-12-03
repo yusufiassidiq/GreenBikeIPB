@@ -28,7 +28,7 @@ export class WelcomePage {
   }
 
   signUp() {
-    this.navCtrl.setRoot(SignUpPage);
+    this.navCtrl.push(SignUpPage);
   }
 
 }
