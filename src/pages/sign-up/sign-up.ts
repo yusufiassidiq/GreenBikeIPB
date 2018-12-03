@@ -11,13 +11,13 @@ import { Data } from '../../provider/data';
 })
 export class SignUpPage {
 
-  name:any;
+  nama:any;
   nim:any;
-  notelepon:any;
+  notelp:any;
   email:any;
   password:any;
   passwordTest:any;
-  address:any;
+  alamat:any;
   departemen:any;
   fakultas:any;
 
@@ -49,7 +49,7 @@ export class SignUpPage {
   // }
 
   signUp(){
-    if(this.name && this.email && this.password && (this.password == this.passwordTest) && this.address && this.departemen && this.fakultas && this.nim && this.notelepon) {
+    if(this.nama && this.email && this.password && (this.password == this.passwordTest) && this.alamat && this.departemen && this.fakultas && this.nim && this.notelp) {
 
       let loading = this.loadCtrl.create({
         content: 'memuat..'
@@ -59,26 +59,28 @@ export class SignUpPage {
 
       //apiPost
       let input = {
-        nama :this.name,
+        nama :this.nama,
         email: this.email, 
         password: this.password,
         nim: this.nim,
-        alamat: this.address,
-        notelp: this.notelepon,
+        alamat: this.alamat,
+        notelp: this.notelp,
         departemen: this.departemen,
         fakultas: this.fakultas
       };
       console.log(input);
       this.http.post(this.data.BASE_URL+"/create_mahasiswa.php",input).subscribe(data => {
-      let response = data.json();
+      console.log('cihuy');
+      console.log(data);
+      let response = data;
       console.log('test');
       console.log(response); 
       if(response.status==200){    
         this.data.logout();
         
-        this.data.login(response.data,"user");//ke lokal
+        this.data.login(response,"user");//ke lokal
         
-        this.navCtrl.setRoot(HelloIonicPage);      
+        this.navCtrl.setRoot(HomePage);      
         loading.dismiss();
       }
       else if(response.status==409) {
