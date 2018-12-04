@@ -21,14 +21,15 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // make HelloIonicPage the root (or first) page
-  rootPage = WelcomePage;
+  rootPage : any;
   pages: Array<{title: string, component: any}>;
 
   constructor(
     public platform: Platform,
     public menu: MenuController,
     public statusBar: StatusBar,
-    public splashScreen: SplashScreen
+    public splashScreen: SplashScreen,
+    private data: Data
   ) {
     this.initializeApp();
 
@@ -50,13 +51,13 @@ export class MyApp {
       this.splashScreen.hide();
     });
     //Session
-    // this.data.isLogin().then((value)=>{
-    //   if(value){
-    //     this.rootPage = HomePage;
-    //   } else {
-    //      this.rootPage = SignInPage;
-    //   }    
-    // });
+    this.data.isLogin().then((value)=>{
+      if(value){
+        this.rootPage = HomePage;
+      } else {
+         this.rootPage = SignInPage;
+      }    
+    });
     //Session
   }
 

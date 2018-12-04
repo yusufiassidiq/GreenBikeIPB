@@ -35,19 +35,6 @@ export class SignUpPage {
     console.log('ionViewDidLoad SignUpPage');
   }
 
-  // done(){
-  //   let loading = this.loadCtrl.create({
-  //     content: 'memuat..'
-  //   });
-
-  //   loading.present();
-    
-
-  //   this.navCtrl.setRoot(HomePage);
-
-  //   loading.dismiss();
-  // }
-
   signUp(){
     if(this.nama && this.email && this.password && (this.password == this.passwordTest) && this.alamat && this.departemen && this.fakultas && this.nim && this.notelp) {
 
@@ -70,23 +57,24 @@ export class SignUpPage {
       };
       console.log(input);
       this.http.post(this.data.BASE_URL+"/create_mahasiswa.php",input).subscribe(data => {
-      console.log('cihuy');
+      // console.log('cihuy');
       console.log(data);
-      let response = data;
-      console.log('test');
+      let response = data.json();
+      // console.log('test');
       console.log(response); 
       if(response.status==200){    
         this.data.logout();
         
-        this.data.login(response,"user");//ke lokal
+        this.data.login(response.data,"user");//ke lokal
         
         this.navCtrl.setRoot(HomePage);      
         loading.dismiss();
       }
       else if(response.status==409) {
-        loading.dismiss();
+        // loading.dismiss();
           let alert = this.alertCtrl.create({
-            title: 'Email Already Taken',      
+            title: 'Email Sudah Terdaftar',
+            message : 'Silahkan Buat Akun Dengan Email Lainnya',      
             buttons: ['OK']
           });
           alert.present();
@@ -95,7 +83,7 @@ export class SignUpPage {
       else {
         loading.dismiss();
           let alert = this.alertCtrl.create({
-            title: 'Failed Creating New Account',      
+            title: 'Gagal Membuat Akun',      
             buttons: ['OK']
           });
           alert.present();      

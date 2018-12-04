@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, MenuController, LoadingController, AlertController } from 'ionic-angular';
 import { HelloIonicPage } from '../hello-ionic/hello-ionic';
 import { SignUpPage } from '../sign-up/sign-up';
 import { HomePage } from '../home/home'
+import { Http } from '@angular/http';
+import { Data } from '../../provider/data';
 
 @Component({
   selector: 'page-sign-in',
@@ -10,19 +12,83 @@ import { HomePage } from '../home/home'
 })
 export class SignInPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  email: any;
+  password: any;
+
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    public menuCtrl: MenuController,
+    private data : Data,
+    public loadCtrl: LoadingController,
+    public alertCtrl: AlertController,
+    public http: Http) {
+      this.menuCtrl.enable(false);
+      // this.testApi();
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad SignInPage');
   }
 
   signIn(){
-    this.navCtrl.setRoot(HomePage);
+    // this.navCtrl.setRoot(HomePage);
+    if(this.email && this.password){
+      let loading = this.loadCtrl.create({
+        content: 'memuat..'
+      });
+
+      loading.present();
+
+      //apiPost
+      let input = {
+        email: this.email, 
+        password: this.password
+      };
+      console.log(input);
+      console.log("1");
+      this.http.post(this.data.BASE_URL+"/login.php",input).subscribe(data => {
+      console.log("2");
+      // let response = JSON.parse(data._body);
+      let response = data.json();
+      console.log("3");
+      // console.log(JSON.parse(response._body)); 
+      if(response.status==200){    
+        this.data.logout();
+        
+        this.data.login(response.data,"user");//ke lokal
+        
+        this.navCtrl.setRoot(HomePage);
+        loading.dismiss();
+      }
+      else {
+        loading.dismiss();
+          let alert = this.alertCtrl.create({
+            title: 'Gagal Masuk',      
+            message : 'Silahkan Periksa Email atau Kata Sandi Anda',
+            buttons: ['OK']
+          });
+          alert.present();
+          
+      }    
+      });
+      //apiPost    
+    }
+  
   }
 
   signUp(){
     this.navCtrl.push(SignUpPage);
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SignInPage');
-  }
+  
+
+  // testApi(){
+    
+  //   this.http.get(this.data.BASE_URL+"/db_connect.php").subscribe(data => {
+  //     console.log(data); 
+  //   });
+      
+  // }
 
 }
