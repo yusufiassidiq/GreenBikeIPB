@@ -6,11 +6,13 @@
 -->
 <ion-header>
 
-  <ion-navbar color="primary">
+  <ion-navbar color="secondary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title text-right>Profile</ion-title>
+    <ion-title text-center>Profil
+      <button ion-button clear class="invisibleButton"></button>
+    </ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -22,9 +24,8 @@
             <!-- <ion-icon name="contact"></ion-icon> -->
           <img src="assets/imgs/profile-pic.jpg">
         </ion-avatar>
-        <h2>{{name}}</h2>
-        <h2>{{nama_user}}</h2>
-        <p>{{email_user}}</p>
+        <h2>{{this.nama_mahasiswa}}</h2>
+        <p>{{this.nim_mahasiswa}}</p>
       </ion-item>
 
      <br>
@@ -46,7 +47,7 @@
      <br>
      <br>
 
-        <button ion-button color="primary" block >Edit Profile</button>
+        <button ion-button color="secondary" block >Edit Profile</button>
         <br/>
         <button ion-button color="danger" block (click)="signOut()">Sign Out</button>
       

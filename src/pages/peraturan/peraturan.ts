@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, App } from 'ionic-angular';
 import { TungguPage } from '../tunggu/tunggu';
+import { Data } from '../../provider/data';
 
 @Component({
   selector: 'page-peraturan',
