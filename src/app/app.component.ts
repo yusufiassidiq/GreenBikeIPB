@@ -55,7 +55,7 @@ export class MyApp {
       if(value){
         this.rootPage = HomePage;
       } else {
-         this.rootPage = SignInPage;
+         this.rootPage = WelcomePage;
       }    
     });
     //Session
