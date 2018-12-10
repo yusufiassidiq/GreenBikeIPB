@@ -3,6 +3,7 @@ import { NavController, NavParams, App, AlertController } from 'ionic-angular';
 import { SignInPage } from '../sign-in/sign-in';
 import { Data } from '../../provider/data';
 import { Http } from '@angular/http';
+import { AnonymousSubject } from 'rxjs/Subject';
 
 @Component({
   selector: 'page-profile',
@@ -12,6 +13,10 @@ export class ProfilePage {
 
   nim_mahasiswa:any;
   nama_mahasiswa:any;
+  alamat_mahasiswa:any;
+  email_mahasiswa:any;
+  notelp_mahasiswa:any;
+
   // userData:any;
   // users:any;
   id_mahasiswa:any;
@@ -30,8 +35,11 @@ export class ProfilePage {
       console.log(data);
       // this.userData = data;
       // console.log(this.userData);
-      this.nama_mahasiswa=data.nama
-      this.nim_mahasiswa=data.nim
+      this.nama_mahasiswa=data.nama;
+      this.nim_mahasiswa=data.nim;
+      this.alamat_mahasiswa=data.alamat;
+      this.email_mahasiswa=data.email;
+      this.notelp_mahasiswa=data.notelp;
       console.log();
       // this.getPesanan();
    
