@@ -14,7 +14,7 @@ import { ProfilePage } from '../pages/profile/profile';
 import { SignInPage } from '../pages/sign-in/sign-in';
 import { SignUpPage } from '../pages/sign-up/sign-up';
 import { WelcomePage } from '../pages/welcome/welcome';
-import { EditprofilPage } from '../pages/editprofil/editprofil';
+import { EditprofilePage } from '../pages/edit-profile/edit-profile';
 import { HomePage } from '../pages/home/home';
 import { DetailSepedaPage } from '../pages/detail-sepeda/detail-sepeda';
 import { PeraturanPage } from '../pages/peraturan/peraturan';
@@ -38,7 +38,7 @@ import { IonicStorageModule } from '@ionic/storage';
     DetailSepedaPage,
     PeraturanPage,
     TungguPage,
-    EditprofilPage,
+    EditprofilePage,
   ],
   imports: [
     BrowserModule,
@@ -61,7 +61,7 @@ import { IonicStorageModule } from '@ionic/storage';
     DetailSepedaPage,
     PeraturanPage,
     TungguPage,
-    EditprofilPage,
+    EditprofilePage,
   ],
   providers: [
     StatusBar,

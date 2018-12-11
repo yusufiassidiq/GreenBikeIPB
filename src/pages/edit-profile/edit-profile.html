@@ -1,0 +1,57 @@
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-center>Edit Profil
+      <button ion-button clear class="invisibleButton"></button>
+    </ion-title>
+  </ion-navbar>
+  </ion-header>
+  
+  
+  <ion-content padding>
+    <ion-list>
+  
+      <ion-item>
+        <ion-label floating>Nama</ion-label>
+        <ion-input type="text" [(ngModel)]="nama"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input type="text" [(ngModel)]="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>No Handphone</ion-label>
+        <ion-input type="text" [(ngModel)]="notelp"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Alamat</ion-label>
+        <ion-input type="text" [(ngModel)]="alamat"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label floating>Current Password</ion-label>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label floating>New Password</ion-label>
+        <ion-input type="password" [(ngModel)]="newPassword"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label floating>Retype New Password</ion-label>
+        <ion-input type="password" [(ngModel)]="newPasswordTest"></ion-input>
+      </ion-item>
+  
+    </ion-list>
+  
+    <button ion-button color="secondary"  block (click)="editProfile()">Edit Profile</button>
+    
+  </ion-content>
+      

@@ -45,13 +45,10 @@ export class SignInPage {
         email: this.email, 
         password: this.password
       };
-      console.log(input);
-      console.log("1");
+      // console.log(input);
       this.http.post(this.data.BASE_URL+"/login.php",input).subscribe(data => {
-      console.log("2");
       // let response = JSON.parse(data._body);
       let response = data.json();
-      console.log("3");
       // console.log(JSON.parse(response._body)); 
       if(response.status==200){    
         this.data.logout();

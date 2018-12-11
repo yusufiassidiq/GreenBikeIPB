@@ -4,6 +4,7 @@ import { SignInPage } from '../sign-in/sign-in';
 import { Data } from '../../provider/data';
 import { Http } from '@angular/http';
 import { AnonymousSubject } from 'rxjs/Subject';
+import { EditprofilePage } from '../edit-profile/edit-profile';
 
 @Component({
   selector: 'page-profile',
@@ -48,6 +49,10 @@ export class ProfilePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProfilePage');
+  }
+
+  editprofil(){
+    this.app.getRootNav().push(EditprofilePage);
   }
 
   signOut(){

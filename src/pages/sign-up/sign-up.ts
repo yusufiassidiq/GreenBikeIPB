@@ -57,13 +57,13 @@ export class SignUpPage {
         departemen: this.departemen,
         fakultas: this.fakultas
       };
-      console.log(input);
+      // console.log(input);
       this.http.post(this.data.BASE_URL+"/create_mahasiswa.php",input).subscribe(data => {
       // console.log('cihuy');
-      console.log(data);
+      // console.log(data);
       let response = data.json();
       // console.log('test');
-      console.log(response); 
+      // console.log(response); 
       if(response.status==200){    
         this.data.logout();
         
