@@ -45,12 +45,12 @@ export class EditprofilePage {
 
   ionViewWillEnter() {
     this.data.getData().then((data) => {
-      console.log(data);
+      // console.log(data);
       // this.userData = data;
       // console.log(this.userData);
       this.id_mahasiswa=data.id_mahasiswa;
       this.passwordold=data.password;
-      // console.log(this.passwordold);
+      // console.log();
       // this.getPesanan();
    
     })

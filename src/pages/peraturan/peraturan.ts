@@ -21,7 +21,14 @@ export class PeraturanPage {
   }
 
   pinjam(){
+    if(this.cucumber==true){
     this.app.getRootNav().push(TungguPage);
+    }
   }
 
+  cucumber: boolean;
+
+  updateCucumber() {
+    console.log('Cucumbers new state:' + this.cucumber);
+  }
 }

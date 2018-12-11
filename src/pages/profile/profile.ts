@@ -33,7 +33,7 @@ export class ProfilePage {
 
   ionViewWillEnter() {
     this.data.getData().then((data) => {
-      console.log(data);
+      // console.log(data);
       // this.userData = data;
       // console.log(this.userData);
       this.nama_mahasiswa=data.nama;
@@ -52,7 +52,7 @@ export class ProfilePage {
   }
 
   editprofil(){
-    this.app.getRootNav().push(EditprofilePage);
+    this.navCtrl.push(EditprofilePage);
   }
 
   signOut(){

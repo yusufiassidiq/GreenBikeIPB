@@ -26,7 +26,7 @@
 
   <ion-item>
     <ion-label text-wrap class="checkbox"><p>Saya bersedia menaati aturan dan membawa berkas-berkas yang telah ditentukan</p></ion-label>
-    <ion-checkbox color="secondary" checked="false"></ion-checkbox>
+    <ion-checkbox [(ngModel)]="cucumber" (ionChange)="updateCucumber()" color="secondary" checked="false"></ion-checkbox>
   </ion-item>
 </ion-content>
 
